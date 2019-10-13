@@ -20,11 +20,22 @@ using namespace std;
 class Singleton
 {
 public:
+
+    /* #brief   默认析构函数
+     * #note    None
+     * #param   None
+     * #retval  None
+     */
     ~Singleton()
     {
         cout << "singleton destructor" << endl;
     }
 
+    /* #brief   获取该类的实例
+     * #note    该函数返回该类的引用
+     * #param   None
+     * #retval  实例的引用
+     */
     static Singleton &getSingleton()
     {
         static Singleton singleton;
@@ -33,6 +44,12 @@ public:
     }
 
 private:
+
+    /* #brief   默认构造函数
+     * #note    None
+     * #param   None
+     * #retval  None
+     */
     Singleton()
     {
         cout << "singleton constructor" << endl;
